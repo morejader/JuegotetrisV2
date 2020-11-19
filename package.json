@@ -1,0 +1,23 @@
+{
+  "name": "juegotetrisv2",
+  "version": "1.0.0",
+  "description": "Juego tetris , proyecto final.\r Integrante  #1: Jader Manuel Moré\r Integrante #2 : Luis Felipe Negrete",
+  "main": "blockrain.jquery.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morejader/JuegotetrisV2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/morejader/JuegotetrisV2/issues"
+  },
+  "homepage": "https://github.com/morejader/JuegotetrisV2#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node": "^15.2.1"
+  }
+}
