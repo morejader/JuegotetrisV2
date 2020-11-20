@@ -1,0 +1,12 @@
+body{
+  background-color: #111;
+  color: #3D9970;
+  padding-top: 5%;
+}
+.container{
+  background-color: #000;
+  border-radius: 5%;
+}
+#themes{
+  padding-left: 15%;
+}
