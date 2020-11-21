@@ -1,51 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tetris</title>
-  <link href="https://cdn.jsdelivr.net/npm/blockrain@0.2.0/src/blockrain.css" rel="stylesheet" />
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" /> 
-  <script src="https://cdn.jsdelivr.net/npm/blockrain@0.2.0/assets/js/jquery-1.11.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/blockrain@0.2.0/src/blockrain.jquery.themes.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/blockrain@0.2.0/src/blockrain.jquery.libs.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/blockrain@0.2.0/src/blockrain.jquery.src.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris</title>
+    <link href="https://cdn.jsdelivr.net/npm/blockrain@0.2.0/src/blockrain.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/blockrain@0.2.0/assets/js/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/blockrain@0.2.0/src/blockrain.jquery.themes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/blockrain@0.2.0/src/blockrain.jquery.libs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/blockrain@0.2.0/src/blockrain.jquery.src.js"></script>
 </head>
 <center>
-<body>
-  <div class="container">  
-    <div class="row">
-      
-      <div class="col"><br>
-        <h1 class="card-title text-center">Tetris Game</h1><br>
-        
-        <div class="btn-group btn-group-toggle themes"  id="themes" data-toggle="buttons">
-          <label class="btn btn-dark">
+
+    <body>
+        <div class="container">
+            <div class="row">
+
+                <div class="col"><br>
+                    <h1 class="card-title text-center">Tetris Game</h1><br>
+
+                    <div class="btn-group btn-group-toggle themes" id="themes" data-toggle="buttons">
+                        <label class="btn btn-dark">
             <input type="radio" name="theme" value="candy"> Candy
           </label>
-          <label class="btn btn-dark">
+                        <label class="btn btn-dark">
             <input type="radio" name="theme" value="modern"> Modern
           </label>
-          <label class="btn btn-dark">
+                        <label class="btn btn-dark">
             <input type="radio" name="theme" value="retro"> Retro
           </label>
-          <label class="btn btn-dark">
+                        <label class="btn btn-dark">
             <input type="radio" name="theme" value="vim"> Vim
           </label>
-          <label class="btn btn-dark">
+                        <label class="btn btn-dark">
             <input type="radio" name="theme" value="monochrome"> Monochrome
           </label>
-          <label class="btn btn-dark">
+                        <label class="btn btn-dark">
             <input type="radio" name="theme" value="gameboy"> Gameboy
           </label>
-          <label class="btn btn-dark">
+                        <label class="btn btn-dark">
             <input type="radio" name="theme" value="aerolab"> Aerolab
           </label>
-        </div><br><br>
-        <div class="game container" style="width:300px; height:500px;"></div><br>
-      </div>
-    </div>
-  </div>
-</body>
+                    </div><br><br>
+                    <div id="q" class="game container" style="width:300px; height:500px;">
+                    </div><br>
+                </div>
+            </div>
+        </div>
+        <script>
+            var $game = $('.game').blockrain({
+                autoplay: true,
+                autoplayRestart: false
+            });
+
+            $("#themes input[name='theme']").click(function() {
+                documentgetElementById("q").value = $game.blockrain('theme', $(this).val());
+            });
+        </script>
+    </body>
 </center>
+<!--
+<script src="script.js"></script>
+-->
+
 </html>
